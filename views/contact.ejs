@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar container">
+        <h1 class="logo">BOOKSHOP</h1>
+        <ul class="navlist" style="list-style-type: none">
+          <li class="navitems">
+            <a href="/">HOME</a>
+          </li>
+          <li class="navitems">
+            <a href="/contact">CONTACT</a>
+          </li>
+          <li class="navitems">
+            <a href="/about">ABOUT</a>
+          </li>
+          <%let x=1;%>
+         <% if(!user){%>
+            <li class="navitems">
+              <a href="/login">SIGN IN</a>
+            </li>
+           <% x=0;%>
+         <% }%>
+          <li class="navitems">
+            <a href="/post">POST</a>
+          </li>
+         <% if(x){%>
+            <li class="navitems">
+              <a href="/logout">Log Out</a>
+            </li>
+        <%  }%>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    
+      <div class="img-container"></div>
+      <section class="main-heading container">
+        <h1>Contact Us</h1>
+        <p>Any question and remarks? Just write us a message!</p>
+      </section>
+      <section class="contact-us container">
+        <div class="contact-info">
+          <div class="contact-info-top">
+            <h3>Contact Information</h3>
+            <p>
+              Fill up the form and our Team will get back to you within 24
+              hours.
+            </p>
+          </div>
+          <div class="contact-info-contact">
+            <ul>
+              <li><i class="fa-solid fa-phone"></i> +0123 4567 8910</li>
+              <li><i class="fa-solid fa-envelope"></i> help@bookdrive.com</li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i> 102 Lajpat Nagar New
+                Delhi
+              </li>
+            </ul>
+          </div>
+          <div class="social-handles">
+            <ul>
+              <li>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form action="">
+            <div>
+              <h5>First Name</h5>
+              <input type="text" name="fisrt name" placeholder="first name" />
+            </div>
+            <div>
+              <h5>Last Name</h5>
+              <input type="text" name="last name" placeholder="last name" />
+            </div>
+            <div>
+              <h5>Email</h5>
+              <input type="text" name="email" placeholder="email" />
+            </div>
+            <div>
+              <h5>Phone</h5>
+              <input type="text" name="phone" placeholder="phone" />
+            </div>
+            <div class="contact-form-message">
+              <h5>Message</h5>
+              <textarea
+                name="message"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="wirte your message here..."
+              ></textarea>
+            </div>
+            <div class="contact-form-button">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

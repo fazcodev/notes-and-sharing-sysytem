@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/about.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@300;400;500&family=Roboto:wght@300;500&display=swap"
+        rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="turn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Titles Cart</title>
+</head>
+
+<body>
+
+        <!-- top navigation bar -->
+
+    <header class="wrapper">
+        <div class="logo"><img src="images/uppperpage/logo.png" alt=""></div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/explore">EXPLORE</a></li>
+            </ul>
+        </nav>
+        <div class="profile-btn">
+            <%let x=1;%>
+            <%if(!user){%>
+            <a class="register" href="/register"><button>Register</button></a>
+            <a class="sign" href="/login"><button>Sign In</button></a>
+            <%x=0;%>
+            <%}%>
+            <%if(x){%>
+                <a class="logout" href="/logout"><button>Log Out</button></a>
+                <%}%>
+        </div>
+    </header>
+    <!-- ----Upper Heading----------- -->
+    <div class="top-left-page ">
+        
+        <div class="upper-heading">
+            
+            <div style="width: fit-content; display: inline-block;">
+                <h1>"I guess there are never enough books"</h1>
+                <h2>-John Stienbeck</h2>
+            </div>  
+            <br><br>
+            <p>Bookdrive is a portal, which enables easy and comprehensive trade of knowledge. <br>
+                Provision of the required literature to those in need, <br>or a conducive trade for an end-user who has need for one book more than the other, <br> is our primary drive. 
+            </p>
+            <br>
+            
+        </div>
+           
+
+    </div>
+    <!-- -----------------SHOWCASE-------------------- -->
+    <div class="showcase">
+        <div class="box">
+            <div class="upper">
+                <i class="fa-solid fa-bullseye fa-3x"></i>
+                <h1>Our Mission</h1>
+            </div>
+            <p>We aspire to serve as a coherent medium, in order to make accessible a flora of fairing books, both digital and hard-binded, with the temperament of a flow of compiled knowledge.To be able to provide a lucid approach to the users, in their attempt to aquire the desired columns of literature, we advocate our own way to assert the fundamental need to generate and disseminate knowledge, as intended.</p>
+        
+        </div>
+        <div class="box">
+            <div class="upper">
+                <i class="fa-brands fa-servicestack fa-3x"></i>
+                <h1>Our Services</h1>
+            </div>
+            <p>We host an assembly of services, as such, that, free knowledge as pdfs and books, as and when, intended, by the uploader, is available to all, without bias, whereas, for the contrary, we serve as a channel which connects two end-users and directs them to hold their conversation as they see fit for a fair trade for the concerned book or pdf.</p>
+
+        </div>
+        <div class="box">
+            <div class="upper">
+                <i class="fa-solid fa-message fa-3x"></i>
+                <h1>Our Message </h1>
+            </div>
+            <p style="font-weight:800; height: 8.3rem;">
+                "A book is a version of the world. If you do not like it, ignore it; or offer your own version in return."</p>
+                <p>In this day of modern age, we move to assimilate the likens of the old pulped prints of knowledge, with the vernacular of the binary bases, to fuel evermore the desire, need and righteousness of dissuading knowledge. Armed with contemporary tools, we hope to honour the most fundamental yearning, the hunger for, empirically, knowledge.</p>
+    
+        </div>
+    </div>
+
+
+</body>
+<!------------------------Flipbook-------------------------- -->
+<section>
+    <h1>Meet Our Team</h1>
+    <div class="container">
+        
+        
+        <div class="flipbook" id="flipbook">
+            <div class="page" style="background-color: white;">
+                <div class="intro1">
+                    
+                    <img src="./images/people/unshaven-young-man1.jpg" alt="" draggable="false">
+                    <h2>Mohd Haider</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis, provident inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur cupiditate quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum distinctio officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa veniam nisi<br></p>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="intro2">
+
+                    <div class="arrow-up">
+                        <img src="./images/arrow/arrow ur.png" alt="Arrow to turn page" title="Click here to turn page right" draggable="false">
+                    </div>
+                    <img src="./images/people/unshaven-young-man1.jpg" alt="" draggable="false">
+                    <h2>Vicky Gupta</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis, provident inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur cupiditate quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum distinctio officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa veniam nisi<br></p>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="page" style="background-color: white;">
+                <div class="intro1">
+                    <div class="arrow-up">
+                        <img src="./images/arrow/arrow ul.png" alt="Arrow to turn page" title="Click here to turn page left" draggable="false">
+                    </div>
+                    <img src="./images/people/unshaven-young-man1.jpg" alt="" draggable="false">
+                    <h2>Fazeel Rizvi</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis, provident inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur cupiditate quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum distinctio officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa veniam nisi<br></p>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="intro2">
+                    <div class="arrow-up">
+                        <img src="./images/arrow/arrow ur.png" alt="Arrow to turn page" title="Click here to turn page right" draggable="false">
+                    </div>
+                    <img src="./images/people/unshaven-young-man1.jpg" alt="" draggable="false">
+                    <h2>Aatir Nadim</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis, provident inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur cupiditate quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum distinctio officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa veniam nisi<br></p>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="page" style="background-color: white;">
+                <div class="intro1">
+                    <div class="arrow-up">
+                        <img src="./images/arrow/arrow ul.png" alt="Arrow to turn page" title="Click here to turn page left" draggable="false">
+                    </div>
+                    <img src="./images/people/unshaven-young-man1.jpg" alt="" draggable="false">
+                    <h2>Aatir Nadim</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis, provident inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur cupiditate quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum distinctio officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa veniam nisi<br></p>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="intro2">
+                    <div class="arrow-up">
+                        <img src="./images/arrow/arrow ur.png" alt="Arrow to turn page" title="Click here to turn page right" draggable="false">
+                    </div>
+                    <img src="./images/people/unshaven-young-man1.jpg" alt="" draggable="false">
+                    <h2>Amit Mishra</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur reiciendis, provident inventore optio facilis repudiandae, architecto laudantium ad, numquam consequatur cupiditate quas voluptates sunt minima dolore deserunt sed vel? Corrupti ex explicabo laborum distinctio officiis laudantium dignissimos in eaque, saepe placeat aperiam ea dolore iste eligendi ipsa veniam nisi<br></p>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-twitter fa-2x "></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <script type="text/javascript">
+        var flipbookEL = document.getElementById('flipbook');
+        window.addEventListener('resize', function(e) {
+        flipbookEL.style.width = '';
+        flipbookEL.style.height = '';
+        $(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+        });
+
+        $(flipbookEL).turn({
+        autoCenter: false,
+        display: 'single',
+        duration: 1600
+        });
+        
+    </script>
+</section>
+
+
+<footer class="End">
+    <a href="www.facebook.com"><i class="fa-brands fa-facebook "></i></a>
+    <a href="www.instagram.com"><i class="fa-brands fa-twitter"></i></a>
+    <a href="www.twitter.com"><i class="fa-brands fa-instagram"></i></a>
+    <br><br>
+    <p>Book Dynasty <span><i class="far fa-copyright"></i></span> 2020, All Right Reserved</p>
+</footer>
+
+</html>

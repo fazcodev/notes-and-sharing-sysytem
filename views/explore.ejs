@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notes sharing system</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+<header>
+    <div class="px-8 mx-auto">
+        <div class="flex justify-between">
+
+            <div class="items-center space-x-1 my-2">
+
+                <a class="item-center" href="/home"><img class="h-10" src="images/logo.png" alt="titles cart"></a>
+
+
+            </div>
+            <div class="hidden md:flex items-center space-x-1">
+                <a class="py-3 px-2" href="/">Home</a>
+                <a class="py-3 px-2" href="/contact">Contact</a>
+                <a class="py-3 px-2" href="/about">About</a>
+                <a class="py-3 px-2" href="/explore">Explore</a>
+            </div>
+
+            <div class="items-center flex space-x-1 my-3">
+               <% let x=1;%>
+             <%   if(!user){%>
+                
+                    <a class="py-1 px-3 text-white bg-black rounded-full" href="/register">Register</a>
+                    <a class="py-1 px-3 border border-black rounded-full hover:text-white hover:bg-black transition duration-500"
+                        href="/login">Sign In</a>
+                       <% x=0;%>
+             <% }  %>
+                <a class="py-1 px-3 text-white bg-cyan-600 rounded-full" href="/post">POST</a>
+
+                <%if(x){%>
+                <a class="py-1 px-3 text-white bg-red-600 rounded-full" href="/logout">Log Out</a>
+            <% }%>
+                <div class="md:hidden flex item-center">
+                    <button class="mobile-menu-button py-1 px-1"><svg xmlns="http://www.w3.org/2000/svg"
+                            class=" h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" mobile-menu hidden grid justify-items-center md:hidden">
+        <a class="block py-2 hover:bg-cyan-300 px-4" href="/">Home</a>
+        <a class="block py-2 hover:bg-cyan-300 px-4" href="/contact">Contact</a>
+        <a class="block py-2 hover:bg-cyan-300 px-4" href="/about">About</a>
+        <a class="block py-2 hover:bg-cyan-300 px-4" href="/explore">Explore</a>
+    </div>
+</header>
+
+
+<main>
+    <div class=" mx-12 card flex justify-center items-center mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+
+            <% for(var i=0; i<rows.length; i++) { %>
+          
+
+        <div class="bg-white rounded-lg border-2 border-cyan-400 hover:shadow-2xl ">
+          <a href="/explore/<%=rows[i].id%>">  <img class="p-2 h-58 w-96" src="post-images/<%=rows[i].images%>" alt="images"></a>
+            <div class="mt-2 border-l-4 border-cyan-300">
+                <div class="flex justify-between">
+                    <a href="/explore/<%=rows[i].id%>"><header class="font-bold text-3xl ml-2"><%=rows[i].title%></header></a>
+                  <a href="/explore/<%=rows[i].id%>">  <p class="font-bold text-2xl mr-4">Rs <%=rows[i].price%></p></a>
+                </div>
+                
+                    <a href="/explore/<%=rows[i].id%>"><p class="font-bold ml-2 mt-2"><%=rows[i].subject%></p></a>
+                
+                <div class="flex justify-between mt-2 mb-2">
+                    <a href="/user/<%=rows[i].Googleid%>"><span class="ml-2"><%=rows[i].Name%></span></a>
+                    <span class="ml-2 text-right mr-3"><%=rows[i].postdate%></span>
+                </div>
+            </div>
+        </div>
+
+        <% } %> 
+    </div>
+    </div>
+
+   
+</main>
+<script type="text/javascript">
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+</script>
+
+</html>

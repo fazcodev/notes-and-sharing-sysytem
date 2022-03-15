@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  
+    <style>
+        ::-webkit-file-upload-button{
+    color: white;
+    cursor: pointer;
+    background: black;
+    border-radius: 50px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+   </style>
+</head>
+
+<body>
+    <main>
+        <header class="">
+            <div class="px-8 mx-auto">
+                <div class="flex justify-between">
+                    <div class="items-center space-x-1 my-2">
+                        <a class="item-center" href="#"><img class="h-10" src="./images/logo.png" alt="titles cart"></a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a class="py-3 px-2" href="/home">Home</a>
+                        <a class="py-3 px-2" href="/contact">Contact</a>
+                        <a class="py-3 px-2" href="/about">About</a>
+                        <a class="py-3 px-2" href="/explore">Explore</a>
+                    </div>
+
+                    <div class="items-center flex space-x-1 my-3">
+
+                        <a class="py-1 px-3 text-white bg-black rounded-full" href="">Register</a>
+                        <a class="py-1 px-3 border border-black rounded-full hover:text-white hover:bg-black transition duration-500"
+                            href="">Sign In</a>
+                        <div class="md:hidden flex item-center">
+                            <button class="mobile-menu-button py-1 px-1"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class=" h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" mobile-menu hidden grid justify-items-center md:hidden">
+                <a class="block py-2 hover:bg-cyan-300 px-4" href="/home">Home</a>
+                <a class="block py-2 hover:bg-cyan-300 px-4" href="/contact">Contact</a>
+                <a class="block py-2 hover:bg-cyan-300 px-4" href="/about">About</a>
+                <a class="block py-2 hover:bg-cyan-300 px-4" href="/explore">Explore</a>
+            </div>
+        </header>
+
+        <form method="post" action="/post" encType="multipart/form-data">
+            <div class=" antialiased px-4 py-2 flex flex-col justify-center sm:py-4">
+                <div class=" mx-auto text-center">
+                    <span class="text-2xl font-light">Lorem ipsum al klteh </span>
+                    <div class="mt-4 bg-white shadow-md  border-black border-x border-b rounded-lg text-left">
+                        <div class="h-2 bg-cyan-400 rounded-t-md border-t border-cyan-400"></div>
+                        <div class="py-6 px-8  grid grid-cols-1 md:grid-cols-2">
+                            <div class="md:mr-5">
+                                <label class="block mt-2  font-semibold">Title<label>
+                                        <input name="title" type="text" placeholder="Title of Book/Notes"
+                                            class=" mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block mt-2  font-semibold">Choose images<label>
+                                        <input type="file" name="sampleFile" accept="image/*"
+                                            class="mx-2 w-full  px-3 py-1 bg-cyan-400 text-white mt-3 rounded-lg" />
+                            </div>
+                            <div class="md:mr-5">
+                                <label class="block mt-2  font-semibold">Price<label>
+                                        <input name="price" type="text" placeholder="Price"
+                                            class="mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                            </div>
+                            <div class="">
+                                <label class="block mt-2  font-semibold">Type<label>
+                                        <input name="type" type="text" placeholder="Hardcopy/Softcopy"
+                                            class="mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                            </div>
+                            <div class="md:mr-5">
+                                <label class="block mt-2  font-semibold">No. of pages<label>
+                                        <input name="page" type="text" placeholder="pages"
+                                            class=" mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                            </div>
+                            <div class="">
+                                <label class="block mt-2  font-semibold">Subject<label>
+                                        <input name="subject" type="text" placeholder="Subject"
+                                            class="mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                            </div>
+                        </div>
+
+                        <div class=" px-8 ">
+                            <div class="">
+                                <label class="block font-semibold">UG or PG<label>
+                                        <input name="graduate" type="text" placeholder="undergraduation/postgraduation"
+                                            class=" mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                            </div>
+                            <div class="">
+                                <label class="block mt-2 font-semibold">Description<label>
+                                        <input name="description" type="text"
+                                            placeholder="About Book and also give your contact information"
+                                            class="mx-2 border w-full h-5 px-3 py-5 mt-3 hover:outline-none focus:outline-none focus:ring-1 focus:ring-cyan-600 rounded-md">
+                            </div>
+                            <div class="">
+                                <button class="mt-5 mb-8 w-full  bg-cyan-500 hover:bg-cyan-600 text-white py-2 px-6 rounded-lg">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+
+
+    </main>
+
+
+
+</body>
+<script type="text/javascript">
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+</script>
+
+</html>
