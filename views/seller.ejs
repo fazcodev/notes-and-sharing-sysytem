@@ -10,7 +10,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <title>Seller Page</title>
-  <link rel="stylesheet" href="./style.css">
+    <base href="../public">
+  <link rel="stylesheet" href="./assets-seller/index.5c5dfcbc.css">
 </head>
 
 <body class="bg-gray-100 ">
@@ -67,123 +68,44 @@
                             class="like-number font-semibold">136</span> Likes</div>
                 </div>
                 <div class="info text-center mt-6 relative">
-                    <h1 class="text-primary-blue-dark font-bold text-5xl">Faiz Iqbal</h1>
+                    <h1 class="text-primary-blue-dark font-bold text-5xl"><%=row[0].Name%></h1>
                     <h4 class="mt-3">Authorize Seller</h4>
                     <p>We have wide range of computer science notes.</p>
                     <span class="absolute top-[58%] left-[24%] ">
-                        <img src="assets/profile.fb6383a3.png"
-                            class="border-[0.6rem] border-gray-100 aspect-square rounded-full w-48" alt=""></span>
+                      
+                        <img src="<%= row[0].Profile %>"
+                            class="border-[0.6rem] border-gray-100 aspect-square rounded-full w-48" alt="profile"></span>
                 </div>
                 <ul>
-                    <li><i class="fa-solid fa-signs-post"></i><span class="rate font-semibold pr-2"> 7</span>Posts</li>
+                    <li><i class="fa-solid fa-signs-post"></i><span class="rate font-semibold pr-2"><%=rows.length%></span>Posts</li>
                     <li><i class="fa-solid fa-star"></i><span class="rate font-semibold pr-2"> 4.8</span>Seller Rating
                     </li>
                 </ul>
             </section>
             <section class="posts mt-24 mb-24">
                 <div class="inline-flex space-x-3 border-b-2 border-gray-500 pb-1 ml-4">
-                    <img src="./assets/Vector.ffd6f63e.svg" alt=""><span class="text-lg"> Posts</span>
+                    <img src="./assets-seller/Vector.ffd6f63e.svg" alt=""><span class="text-lg"> Posts</span>
                 </div>
                 <hr class="border-[0.1rem]">
                 <div class="cards grid grid-cols-3 gap-8 mt-8 md:grid-cols-2 sm:grid-cols-1">
-
+                    <%for(let i=0;i<rows.length;i++){%>
                     <div class="card flex flex-col rounded-xl shadow-lg shadow-gray-400 overflow-hidden">
-                        <img src="./assets/img.png" class="object-cover w-full h-56" alt="">
+                      <a href="/explore/<%=rows[i].id%>">  <img src="./post-images/<%=rows[i].images%>" class="object-cover w-full h-56" alt="post"></a>
                         <div class="detail bg-primary-blue-light py-4 px-5 text-primary-blue-dark">
-                            <h1 class="font-bold text-2xl"><i class="fa-solid fa-indian-rupee-sign"></i> 1,234</h1>
-                            <p class="text-sm mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                id ab totam dolor recusandae facilis quo sit harum nesciunt tempore!</p>
+                            <h1 class="font-bold text-2xl"><i class="fa-solid fa-indian-rupee-sign"></i><%= rows[i].price%></h1>
+                            <p class="text-sm mt-3"><%=rows[i].description%></p>
                             <div class="flex justify-between mt-8 mb-2">
-                                <h3 class="font-semibold">hey Man, Location Man</h3>
+                                <h3 class="font-semibold"><%=rows[i].postdate%></h3>
                                 <div>
                                     <i class="fa-solid fa-star"></i> 4.5/5</div>
                             </div>
                         </div>
                     </div>
+                <%}%>
 
-                    <div class="card flex flex-col rounded-xl shadow-lg shadow-gray-400 overflow-hidden">
-                        <img src="./assets/img.png" class="object-cover w-full h-56" alt="">
-                        <div class="detail bg-primary-blue-light py-4 px-5 text-primary-blue-dark">
-                            <h1 class="font-bold text-2xl"><i class="fa-solid fa-indian-rupee-sign"></i> 1,234</h1>
-                            <p class="text-sm mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                id ab totam dolor recusandae facilis quo sit harum nesciunt tempore!</p>
-                            <div class="flex justify-between mt-8 mb-2">
-                                <h3 class="font-semibold">hey Man, Location Man</h3>
-                                <div>
-                                    <i class="fa-solid fa-star"></i> 4.5/5</div>
-                            </div>
-                        </div>
-                    </div>
+                  
 
-                    <div class="card flex flex-col rounded-xl shadow-lg shadow-gray-400 overflow-hidden">
-                        <img src="./assets/img.png" class="object-cover w-full h-56" alt="">
-                        <div class="detail bg-primary-blue-light py-4 px-5 text-primary-blue-dark">
-                            <h1 class="font-bold text-2xl"><i class="fa-solid fa-indian-rupee-sign"></i> 1,234</h1>
-                            <p class="text-sm mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                id ab totam dolor recusandae facilis quo sit harum nesciunt tempore!</p>
-                            <div class="flex justify-between mt-8 mb-2">
-                                <h3 class="font-semibold">hey Man, Location Man</h3>
-                                <div>
-                                    <i class="fa-solid fa-star"></i> 4.5/5</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card flex flex-col rounded-xl shadow-lg shadow-gray-400 overflow-hidden">
-                        <img src="./assets/img.png" class="object-cover w-full h-56" alt="">
-                        <div class="detail bg-primary-blue-light py-4 px-5 text-primary-blue-dark">
-                            <h1 class="font-bold text-2xl"><i class="fa-solid fa-indian-rupee-sign"></i> 1,234</h1>
-                            <p class="text-sm mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                id ab totam dolor recusandae facilis quo sit harum nesciunt tempore!</p>
-                            <div class="flex justify-between mt-8 mb-2">
-                                <h3 class="font-semibold">hey Man, Location Man</h3>
-                                <div>
-                                    <i class="fa-solid fa-star"></i> 4.5/5</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card flex flex-col rounded-xl shadow-lg shadow-gray-400 overflow-hidden">
-                        <img src="./assets/img.png" class="object-cover w-full h-56" alt="">
-                        <div class="detail bg-primary-blue-light py-4 px-5 text-primary-blue-dark">
-                            <h1 class="font-bold text-2xl"><i class="fa-solid fa-indian-rupee-sign"></i> 1,234</h1>
-                            <p class="text-sm mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                id ab totam dolor recusandae facilis quo sit harum nesciunt tempore!</p>
-                            <div class="flex justify-between mt-8 mb-2">
-                                <h3 class="font-semibold">hey Man, Location Man</h3>
-                                <div>
-                                    <i class="fa-solid fa-star"></i> 4.5/5</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card flex flex-col rounded-xl shadow-lg shadow-gray-400 overflow-hidden">
-                        <img src="./assets/img.png" class="object-cover w-full h-56" alt="">
-                        <div class="detail bg-primary-blue-light py-4 px-5 text-primary-blue-dark">
-                            <h1 class="font-bold text-2xl"><i class="fa-solid fa-indian-rupee-sign"></i> 1,234</h1>
-                            <p class="text-sm mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                id ab totam dolor recusandae facilis quo sit harum nesciunt tempore!</p>
-                            <div class="flex justify-between mt-8 mb-2">
-                                <h3 class="font-semibold">hey Man, Location Man</h3>
-                                <div>
-                                    <i class="fa-solid fa-star"></i> 4.5/5</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card flex flex-col rounded-xl shadow-lg shadow-gray-400 overflow-hidden">
-                        <img src="./assets/img.png" class="object-cover w-full h-56" alt="">
-                        <div class="detail bg-primary-blue-light py-4 px-5 text-primary-blue-dark">
-                            <h1 class="font-bold text-2xl"><i class="fa-solid fa-indian-rupee-sign"></i> 1,234</h1>
-                            <p class="text-sm mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                id ab totam dolor recusandae facilis quo sit harum nesciunt tempore!</p>
-                            <div class="flex justify-between mt-8 mb-2">
-                                <h3 class="font-semibold">hey Man, Location Man</h3>
-                                <div>
-                                    <i class="fa-solid fa-star"></i> 4.5/5</div>
-                            </div>
-                        </div>
-                    </div>
+                  
                 </div>
             </section>
         </main>

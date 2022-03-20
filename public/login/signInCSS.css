@@ -1,0 +1,272 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    height: 100%;
+    background-image: url("./bgimage.jpeg");
+    backdrop-filter: blur(15px);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.fheader
+{
+    border: none;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    flex-wrap: wrap;
+}
+
+.flogo
+{
+    background-image: url("./logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    height: 10vh;
+    width: 16vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5vh;
+    margin-right: 100vh;
+    z-index: 8;
+}
+
+.fitem
+{
+    display: flex;
+    margin-left: 14px;
+    margin-right: 14px;
+    border: none;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 16pt;
+    font-weight: lighter;
+    font-family: Arial, Helvetica;
+    
+}
+
+.flbt
+{
+    display: flex;
+    margin-left: 20vh;
+    border: none;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 12pt;
+    z-index: 8;
+}
+
+.optd
+{
+    padding: 0.5rem 0.5rem;
+    font-size: 12pt;
+    font-weight: lighter;
+    font-family: Arial, Helvetica;
+    height: 6vh;
+    border: none;
+    border-radius: 12px;
+    background: none;
+    z-index: 8;
+}
+
+.optd:hover
+{
+    background-color: rgba(20, 191, 221, 0.836);
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+}
+
+.sflbt
+{
+    font-size: 12pt;
+    font-family: Arial, Helvetica;
+    height: 6vh;
+    border: none;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 8;
+}
+
+.sflbt:hover
+{
+    background-color: rgba(40, 40, 41, 0.514);
+    cursor: pointer;
+}
+
+.fmain
+{
+    border: none;
+    padding-bottom: 0.5rem;
+    width: 70vh;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    margin-top: 7vh;
+    margin-left: 72vh;
+    flex-direction: column;
+    box-shadow: -6px 0 white, 6px 0 white,  0px 5px 30px -1px rgb(165, 164, 164);
+    flex-wrap: wrap; 
+}
+
+#sgin
+{
+    display: flex;
+    border: none;
+    width: 70vh;
+    margin-bottom: 13vh;
+    justify-content: center;
+    height: 5vh;
+    font-size: 18pt;
+    font-family: monospace;
+}
+
+input[type=text]
+{
+    border: none;
+    width: 58vh;
+    height: 6vh;
+    margin-bottom: 18px;
+    margin-left: 2.5vh;
+    padding-left: 40px;
+    background-color: rgb(240, 240, 240);
+    font-size: 12pt;
+    font-family: Andale Mono, monospace;
+    background-image: url("./username.png");
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: 8px 10px;
+}
+
+input[type=text]:focus
+{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(187, 187, 187);
+    border-bottom: 1px solid rgb(89, 236, 247);
+    outline: none;
+}
+
+input[type=password]
+{
+    border: none;
+    width: 58vh;
+    height: 6vh;
+    margin-bottom: 25px;
+    margin-left: 2.5vh;
+    padding-left: 40px;
+    background-color: rgb(240, 240, 240);
+    font-size: 12pt;
+    font-family: Andale Mono, monospace;
+    background-image: url("pass.png");
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: 8px 10px;
+}
+
+input[type=password]:focus
+{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(187, 187, 187);
+    border-bottom: 1px solid rgb(89, 236, 247);
+    outline: none;
+}
+
+input[type=submit]
+{
+    border: none;
+    margin-top: 18px;
+    margin-left: 53vh;
+    font-size: 14pt;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    height: 6vh;
+    width: 14vh;
+    background-color: rgba(20, 191, 221, 0.836);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+a:link
+{
+    margin-left: 3vh;
+    text-decoration: none;
+    color: rgb(57, 17, 236);
+}
+
+a:visited
+{
+    margin-left: 2.5vh;
+    text-decoration: none;
+    color: rgb(57, 17, 236);
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+.divider
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0.8rem 1.1rem;
+    font-family: Andale Mono, monospace;
+    color: rgb(116, 116, 116);
+}
+
+.divider::after,
+.divider::before 
+{
+    content: "";
+    border: 1px solid rgb(187, 187, 187);
+    border-bottom: none;
+    flex: 1;
+}
+
+.divider:not(:empty)::before 
+{
+    margin-right: 1rem;
+}
+  
+.divider:not(:empty)::after 
+{
+    margin-left: 1rem;
+}
+
+.ggl
+{
+    width: 3.5rem;
+    height: 3.5rem;
+    background-image: url("googlelogo.png");
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    background-position: center;
+    margin-left: 12rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.noDesign, .noDesign:hover, .noDesign:focus, .noDesign:active {
+    text-decoration: none !important;
+    color: inherit !important;
+}

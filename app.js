@@ -88,19 +88,37 @@ app.get('/explore', (req, res) => {
     });
 
 });
+
+app.post('/explore',(req,res)=>{
+    let searchItem=req.body.searchItem;
+    let sql="select users.Googleid,users.Name,posts.id,posts.images, books.title,books.price,categories.subject,posts.postdate from posts join categories on posts.id=categories.postid join books on posts.id=books.postid join users on users.Googleid=posts.userid WHERE books.title LIKE ? OR books.description LIKE ?";
+    pool.getConnection((err,connection)=>{
+        connection.query(sql,[searchItem,searchItem],(err,rows)=>{
+            if(err)console.log(err);
+            res.render('explore', { rows: rows,user:req.user });
+        })
+    })
+});
+
+app.get("/login", (req, res) => {
+    res.render("login");
+});
+
 app.post("/login", (req, res) => {
     res.redirect("home");
 });
 
 app.get('/post', isLoggedIn, (req, res) => {
-    res.render('post');
+    res.render('post',{user:req.user});
 });
 
 app.get('/explore/:id', (req, res) => {
     let id = req.params.id;
     pool.getConnection((err, connection) => {
-        connection.query("select users.Googleid,users.Name,posts.id,posts.images, books.title,books.price,categories.subject,posts.postdate from posts join categories on posts.id=categories.postid join books on posts.id=books.postid join users on users.Googleid=posts.userid where posts.id=?", [id], (err, rows) => {
-            res.render('seller',{rows});
+        connection.query("select users.Googleid,users.Name,posts.id,posts.images,books.description, books.title,books.price,categories.subject,posts.postdate from posts join categories on posts.id=categories.postid join books on posts.id=books.postid join users on users.Googleid=posts.userid where posts.id=?", [id], (err, rows) => {
+         
+            res.render('item-details',{rows,user:req.user});
+            
         });
     });
 });
@@ -109,12 +127,14 @@ app.get('/user/:id',(req,res)=>{
     let id = req.params.id;
     pool.getConnection((err, connection) => {
         connection.query("select * from users where Googleid=?", [id], (err, row) => {
-            console.log(row);
+            
+        
+        connection.query("select posts.id,posts.images,posts.postdate,books.price,books.description from posts join books on posts.id=books.postid  where posts.userid=?", [id], (err, rows) => {
+            
+            
+           res.render('seller',{rows:rows,row:row})
         });
-        connection.query("SELECT * FROM posts where posts.userid=?", [id], (err, rows) => {
-            console.log("posts");
-            console.log(rows);
-        });
+    });
     });
 })
 

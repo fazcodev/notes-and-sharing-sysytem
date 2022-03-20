@@ -60,7 +60,18 @@
 
 
 <main>
-    <div class=" mx-12 card flex justify-center items-center mt-8">
+    <form action="/explore" method="post">
+    <div class="mx-12 mt-8 flex justify-center ">
+        <div class="mb-3 flex ">
+          <div class="flex  items-stretch w-full mb-4">
+            <input type="search" name="searchItem" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5  bg-white bg-clip-padding border border-2 border-black rounded transition ease-in-out m-0 focus:border-cyan-600 " placeholder="Search" aria-label="Search" aria-describedby="button-addon3">
+            <button class="btn inline-block mx-1 px-6 py-2 border-2 border-black text-white font-medium text-xs leading-tight uppercase rounded bg-black hover:border-cyan-600 hover:bg-cyan-600 transition duration-150 ease-in-out" type="submit">Search</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class=" mx-12 card flex justify-center items-center mt-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
 

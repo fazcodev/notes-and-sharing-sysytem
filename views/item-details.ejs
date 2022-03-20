@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="lg:text-[95%] md:text-[90%] sm:text-[85%]">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Item Details</title>
+    <base href="../public">
+  <link rel="stylesheet" href="./assets/index.7155aae5.css">
+</head>
+
+<body class="bg-[url('Images/Background.png')]">
+    <div class="wrapper w-11/12 m-auto md:w-10/12">
+        <header>
+            <div class="mx-auto">
+                <div class="flex justify-between item-center border-b-[0.15rem] border-slate-300 z-10">
+
+                    <div class="flex items-center space-x-1 my-2">
+                        <a class="item-center" href="/home"><img class="h-10" src="data:image/png;base64,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"
+                                alt="titles cart"></a>
+                    </div>
+
+                    <div class="flex md:hidden items-center space-x-1">
+                        <a class="py-3 px-2" href="/">Home</a>
+                        <a class="py-3 px-2" href="/contact">Contact</a>
+                        <a class="py-3 px-2" href="/about">About</a>
+                        <a class="py-3 px-2" href="/explore">Explore</a>
+                    </div>
+
+                    <div class="items-center flex space-x-1 my-3">
+                        <%let x=1;%>
+                        <%if(!user){%>
+                        <a class="py-1 px-3 text-white bg-black rounded-full" href="/register">Register</a>
+                        <a class="py-1 px-3 border border-black rounded-full hover:text-white hover:bg-black transition duration-500"
+                            href="/login">Sign In</a>
+                            <% x=0;%>
+                            <%}%>
+                            <a class="py-1 px-3  bg-cyan-300 rounded-full" href="/post">Post</a>
+                          <%  if(x){    %>
+                                <a class="py-1 px-3  bg-red-600 rounded-full" href="/logout">Log out</a>
+                          <%  }%>
+                        <div class="hidden md:flex item-center">
+                            <button class="mobile-menu-button py-1 pr-2 pl-4 duration-500 ease-in-out">
+                                <div class="hamburger-line flex flex-col w-8 h-[1.38rem] justify-between items-center">
+                                    <div
+                                        class="line line-1 w-7 h-[0.15rem] bg-black duration-200 ease-in-out  origin-[0%]">
+                                    </div>
+                                    <div class="line line-2 w-7 h-[0.15rem] bg-black duration-100 ease-in-out"></div>
+                                    <div
+                                        class="line line-3 w-7 h-[0.15rem] bg-black duration-200 ease-in-out origin-[0]">
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu grid justify-items-center hidden ">
+                <a class="block py-2 hover:bg-cyan-300 px-4" href="/">Home</a>
+                <a class="block py-2 hover:bg-cyan-300 px-4" href="/contact">Contact</a>
+                <a class="block py-2 hover:bg-cyan-300 px-4" href="/about">About</a>
+                <a class="block py-2 hover:bg-cyan-300 px-4" href="/explore">Explore</a>
+            </div>
+        </header>
+
+        <main class="mt-4">
+            <section class="flex gap-10 my-12 justify-between items-center md:flex-col">
+                <div class="hidden md:block bg-white px-6 py-8 shadow-lg shadow-gray-400 rounded-xl">
+                    <h1 class="text-2xl text-primary-blue-dark"><span class="font-semibold"> Handwritten
+                            Notes | </span> <%=rows[0].title%> </h1>
+                </div>
+                <div class="notes-image-button-wrapper flex gap-8 flex-col basis-1/2 lg:h-[32rem]">
+
+                    <div
+                        class="notes-image flex justify-between bg-white px-5 py-6 gap-4 h-full shadow-lg shadow-gray-400 rounded-xl ">
+
+                        <div class="flex flex-col justify-between  w-[20%] gap-4">
+
+                            <div class=""><img src="./assets/image 2.04aecbfe.png" class="" alt="1">
+                            </div>
+                            <div class=""><img src="./assets/image 2.04aecbfe.png" class=" object-cover" alt="2">
+                            </div>
+                            <div class=""><img src="./assets/image 2.04aecbfe.png" class="object-cover " alt="3">
+                            </div>
+                            <div class=""><img src="./assets/image 2.04aecbfe.png" class="object-cover " alt="4">
+                            </div>
+                            <div class=""><img src="./assets/image 2.04aecbfe.png" class="object-cover" alt="5">
+                            </div>
+                        </div>
+                        <div class="w-[60%]">
+                            <img src="./post-images/<%=rows[0].images%>" class="h-full w-full object-cover" alt="">
+                        </div>
+                        <div class="flex justify-evenly gap-4 text-primary-blue w-[10%]">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col  gap-10 basis-1/2 md:flex-col-reverse md:w-full">
+                    <div class="bg-white px-6 py-8 shadow-lg shadow-gray-400 rounded-xl">
+                        <div class="md:hidden">
+                            <h1 class="text-3xl text-primary-blue-dark"><span class="font-semibold">C++ Handwritten
+                                    Notes </span> (2022) | Jamia B.Tech | CS Notes</h1>
+                        </div>
+                        <div class="flex items-center justify-between mt-12 md:mt-0">
+                            <div>
+                                <div class=" text-primary-blue">
+                                    <p>Written By : <a href="/user/<%=rows[0].Googleid%>"><span class="font-semibold"><%=rows[0].Name%></span></a></p>
+                                </div>
+                                <div class="mt-4 flex"><i class="fa-solid fa-star text-yellow-400 mr-2"></i>
+                                    <p class="text-xs text-primary-blue">4.5/5 | 100 Ratings</p>
+                                </div>
+                            </div>
+                            <div class="flex text-primary-blue-dark items-center">
+                                <p class="text-primary-blue mr-2">Price : </p> <i
+                                    class="fa-solid fa-indian-rupee-sign text-xl"></i>
+                                <p class=" text-xl font-bold ml-1"><%=rows[0].price%></p>
+                            </div>
+                        </div>
+                        <hr class="border-[0.1rem] mt-8">
+                        <div class="flex mt-8 mb-4 justify-between px-2 lg:flex-col lg:items-center lg:gap-4">
+
+                            <div class="flex gap-6 ml-2 w-full justify-between">
+                                <div class="flex gap-2 items-center"><i
+                                        class="fa-solid fa-calendar-days text-xl text-primary-blue"></i>
+                                    <div>
+                                        <p class="text-xs text-primary-blue-light">Date Posted</p>
+                                        <p class="text-sm text-primary-blue"><%=rows[0].postdate%></p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-2 items-center">
+                                    <div><i class="fa-solid fa-location-dot text-xl text-primary-blue"></i></div>
+                                    <div>
+                                        <p class="text-xs text-primary-blue-light">Location</p>
+                                        <p class="text-sm text-primary-blue">Banaras</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-evenly lg:flex-col lg:items-center ">
+                        <button
+                            class="bg-primary-blue text-white px-4 py-3 w-2/5 font-semibold text-lg rounded-lg lg:w-full lg:mb-6">Chat
+                            With Seller</button>
+                        <button
+                            class="bg-primary-blue-dark text-white px-4 py-3 w-2/5 font-semibold text-lg rounded-lg lg:w-full">Contact</button>
+                    </div>
+                </div>
+            </section>
+            <section class="">
+                <div class="bg-white px-6 py-8 shadow-lg shadow-gray-400 rounded-xl">
+                    <h1 class="text-2xl font-bold text-primary-blue">Discription</h1>
+                    <hr class="border-[0.1rem] mt-4">
+                    <p class="mt-4 text-slate-500"> <%=rows[0].description %></p>
+                </div>
+            </section>
+            <section class="my-16">
+                <div class="bg-white px-6 py-8 shadow-lg shadow-gray-400 rounded-xl">
+                    <h1 class="text-2xl font-bold text-primary-blue">Some More Similar Notes</h1>
+                    <hr class="border-[0.1rem] my-4">
+                    <div class="flex items-center justify-around gap-8">
+                        <button class="left-slide"><i
+                                class="fa-solid fa-angle-left text-3xl text-slate-500"></i></button>
+                        <div class="cards flex  gap-8 ">
+                            <div class="card rounded-xl shadow-lg shadow-slate-300 lg:hidden">
+                                <img src="./assets/image 2.04aecbfe.png" class="h-44 w-full object-cover" alt="">
+                                <div class="px-3 py-4">
+                                    <div class="flex text-primary-blue-dark items-center">
+                                        <p class="text-primary-blue mr-2 text-md">Price : </p> <i
+                                            class="fa-solid fa-indian-rupee-sign text-xl"></i>
+                                        <p class=" text-xl font-bold ml-1">1,000</p>
+                                    </div>
+                                    <div class="mt-6">
+                                        <div class=" text-primary-blue">
+                                            <p class="text-sm">Written By : <span class="font-semibold">Faiz
+                                                    Iqbal</span></p>
+                                        </div>
+                                        <div class="mt-2 flex"><i class="fa-solid fa-star text-yellow-400 mr-1"></i>
+                                            <p class="text-xs font-bold text-primary-blue">4.5/5 | 100 Ratings</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card rounded-xl shadow-lg shadow-slate-300 md:hidden">
+                                <img src="./assets/image 2.04aecbfe.png" class="h-44 w-full object-cover" alt="">
+                                <div class="px-3 py-4">
+                                    <div class="flex text-primary-blue-dark items-center">
+                                        <p class="text-primary-blue mr-2 text-md">Price : </p> <i
+                                            class="fa-solid fa-indian-rupee-sign text-xl"></i>
+                                        <p class=" text-xl font-bold ml-1">1,000</p>
+                                    </div>
+                                    <div class="mt-6">
+                                        <div class=" text-primary-blue">
+                                            <p class="text-sm">Written By : <span class="font-semibold">Faiz
+                                                    Iqbal</span></p>
+                                        </div>
+                                        <div class="mt-2 flex"><i class="fa-solid fa-star text-yellow-400 mr-1"></i>
+                                            <p class="text-xs font-bold text-primary-blue">4.5/5 | 100 Ratings</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card rounded-xl shadow-lg shadow-slate-300 sm:hidden">
+                                <img src="./assets/image 2.04aecbfe.png" class="h-44 w-full object-cover" alt="">
+                                <div class="px-3 py-4">
+                                    <div class="flex text-primary-blue-dark items-center">
+                                        <p class="text-primary-blue mr-2 text-md">Price : </p> <i
+                                            class="fa-solid fa-indian-rupee-sign text-xl"></i>
+                                        <p class=" text-xl font-bold ml-1">1,000</p>
+                                    </div>
+                                    <div class="mt-6">
+                                        <div class=" text-primary-blue">
+                                            <p class="text-sm">Written By : <span class="font-semibold">Faiz
+                                                    Iqbal</span></p>
+                                        </div>
+                                        <div class="mt-2 flex"><i class="fa-solid fa-star text-yellow-400 mr-1"></i>
+                                            <p class="text-xs font-bold text-primary-blue">4.5/5 | 100 Ratings</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card rounded-xl shadow-lg shadow-slate-300">
+                                <img src="./assets/image 2.04aecbfe.png" class="h-44 w-full object-cover" alt="">
+                                <div class="px-3 py-4">
+                                    <div class="flex text-primary-blue-dark items-center">
+                                        <p class="text-primary-blue mr-2 text-md">Price : </p> <i
+                                            class="fa-solid fa-indian-rupee-sign text-xl"></i>
+                                        <p class=" text-xl font-bold ml-1">1,000</p>
+                                    </div>
+                                    <div class="mt-6">
+                                        <div class=" text-primary-blue">
+                                            <p class="text-sm">Written By : <span class="font-semibold">Faiz
+                                                    Iqbal</span></p>
+                                        </div>
+                                        <div class="mt-2 flex"><i class="fa-solid fa-star text-yellow-400 mr-1"></i>
+                                            <p class="text-xs font-bold text-primary-blue">4.5/5 | 100 Ratings</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="right-slide"><i
+                                class="fa-solid fa-angle-right text-3xl text-slate-500"></i></button>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    <script type="text/javascript">
+        const btn = document.querySelector(".mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+        const menuLines = document.querySelectorAll(".line");
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            menuLines[0].classList.toggle("rotate-45");
+            menuLines[1].classList.toggle("opacity-0");
+            menuLines[2].classList.toggle("-rotate-45");
+
+        });
+    </script>
+</body>
+
+</html>
