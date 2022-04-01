@@ -1,0 +1,915 @@
+@import url('https://fonts.googleapis.com/css2?family=Freehand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Montserrat:wght@300;400;500;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Background & Basic Styles*/
+html{
+    font-size: 62.5%;
+    background: url('../images/upperpage/upperbg.png') no-repeat center center fixed; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+
+}
+
+/* STYLES FOR TOP PAGE ----------------------------------------------------------------------------------------------*/
+
+    /* Button Styles */
+
+.wrapper .logo img{
+    width: 12rem;
+    margin: 1.5rem;
+}
+li, a, button {
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #03045e;
+}
+.register button{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding:  0.3em 0.6em;
+    transition: all 0.4s;
+}
+.sign button{
+    background-color: rgba(76, 175, 80, 0);
+    color: black;
+    border: solid black ;
+    border-radius: 30px;
+    padding: 0.2em 0.6em;   
+    margin: 0 2rem;
+    transition: all 0.4s;
+    position: relative;
+    
+}
+.register button:hover, .sign button:hover {
+    box-shadow: 0.8rem 0.8rem white;
+    transition: .3s;
+}
+/*--------------------- HEADING ---------------*/
+.upper-heading h1{
+    font-family: Poppins;
+    font-size: 4rem;
+    color: #0c0c39;
+    line-height: 1.4;
+}
+.upper-heading p{
+
+    font-family: Nunito;
+    color: #34343d;
+    font-size: 1.8rem;
+}
+.top-left-page{
+    height: 25rem;
+    text-align: center;
+}
+
+/* NAV BAR */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_links {
+    list-style: none;
+    display: flex;
+}
+nav{
+    margin-left: 4.5rem;
+}
+nav ul li{
+    padding-left: 3rem;
+    /* position: relative; */
+}
+/* Navigation links animation */
+
+nav ul li::after{
+    content: '';
+    display: block;
+    background-color:#3dc8ff;
+    height: 0.4rem;
+    width: 0;
+    transition: all 0.5s ease-in-out;
+    
+}
+nav ul li:hover::after {
+   width: 100%;
+}
+
+
+
+/*-------------Showcase--------------------*/
+.showcase{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    
+}
+.showcase .box{
+    margin: 0 1rem;
+    border-radius: 20px;
+    width: 30%;
+    /* box-shadow: 0 2px 8px #666; */
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 #def8fd;
+    background-color: #90E0FF;
+
+}
+.showcase .box .upper{
+    color:#181b3e;
+    padding: 15px;
+    font-family: Poppins;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.showcase .box .upper h1{
+    display: inline-block;
+    padding-left: 15px;
+}
+.showcase .box h1::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #3dc8ff;;
+    
+    
+}
+.showcase .box p{
+    color: white;
+    text-align: center;
+    font-size: 1.58rem; 
+    font-weight: 500;
+    padding: 15px;
+    padding-top: 0;
+    font-family: Nunito; 
+    text-align: left;
+    color:#181b3e;
+}
+.showcase .box p::first-letter{
+    font-size: 32px;
+}
+
+/* -------------------Flipbook------------------- */
+section{
+    overflow: hidden;
+}
+section .container {
+/* display: flex; */
+height: 100vh;
+width: 85vw;
+justify-content: center;
+margin: 0 auto;
+margin-bottom: 50px;
+}
+
+.container .flipbook {
+    height: 100%;
+    transition: margin-left 0.25s ease-out;
+    width: 100%;    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* box-shadow: 0 4px 10px #666; */
+    box-shadow: 5px 7px 5px rgba(0, 0, 0, 0.25), -5px -5px 10px 0 #def8fd;
+}
+.container .flipbook .page{
+    display: flex;
+}
+.container img {
+display: block;
+max-width: 150px;
+object-position: 100% 5%;
+object-fit: cover;
+aspect-ratio: 1 / 1;
+border-radius: 100px;
+padding: 0.2rem;
+border: 2px solid #181b3e;
+margin-bottom: 20px;
+}
+.container h2{
+    font-size: 2.5rem;
+    font-family: montserrat;
+    font-weight: 700;
+}
+.container .flipbook p::first-letter{
+    font-size: 32px;
+}
+.container .intro1 h2::after{
+    content: "";
+    height: 3px;
+    width: auto;
+    display: block;
+    background-color: white;
+    margin-bottom: 15px;
+    
+}
+.container .intro1 p{
+    font-size: 1.6rem;
+    font-family: Nunito;
+    font-weight: 600;
+    width: 50%;
+    
+}
+.container .intro1 p::after{
+    content: "";
+    display: block;
+    background-color: white;
+    width: auto;
+    height: 3px;
+    margin-top: 15px;
+
+}
+.container .intro2 h2::after{
+    content: "";
+    height: 3px;
+    width: auto;
+    display: block;
+    background-color: #90E0FF;
+    margin-bottom: 15px;
+    
+}
+.container .intro2 p{
+    font-size: 1.6rem;
+    font-family: Nunito;
+    font-weight: 600;
+    width: 50%;
+    
+}
+.container .intro2 p::after{
+    content: "";
+    display: block;
+    background-color: #90E0FF;
+    width: auto;
+    height: 3px;
+    margin-top: 15px;
+
+}
+section h1{
+    margin-top: 5rem;
+    text-shadow: 2px 2px 6px #90E0FF;
+    font-size: 7rem;
+    font-family: freehand;
+    text-align: center;
+    color: #181b3e;
+}
+/* section h1::after{
+    content: "";
+    width:50px;
+    height: 2px;
+    background-color: #90E0FF;
+} */
+.container .flipbook .intro1{
+    /* text-align: center; */
+    width: 50%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    color: #181b3e;
+    background: linear-gradient(to right, #CAf0F8, #90E0FF);
+    border-right: 2px solid #181b3e;
+    
+}
+.container .flipbook .intro2{
+    width: 50%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    color: #181b3e;
+    background-color: white;
+}
+.container .flipbook .icons{
+    align-self: flex-start;
+    width: 50%;
+    margin: 5px auto;
+    margin-top: 20px;
+}
+.container .intro1 .icons a{
+    font-size: 1rem;
+    padding-left:10px;
+    color: white;
+}
+.container .intro2 .icons a{
+    font-size: 1rem;
+    padding-left:10px;
+    color: #67d4ff;
+}
+.container .icons a:hover{
+    color: #181b3e;
+}
+.container .flipbook .intro2 .arrow-up img{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 92%;
+    bottom: 92%;
+}
+.container .flipbook .intro1 .arrow-up img{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 92%;
+    bottom: 92%;
+}
+
+/* --------------------Footer-------------------------------------- */
+.End{
+    height: 6rem;
+    background-color: #181b3e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+.End a{
+    display: inline-block;
+    margin: auto 1rem;
+    color: white;
+}
+
+
+/* -------------------------------Media---------------------- */
+@media (max-width: 1024px){
+    
+    /* ------------Top-Page------------------------- */
+    .wrapper .logo img{
+        width: 10rem;
+        margin: 1rem;
+    }
+    li, a, button {
+        font-size: 1.5rem;
+    }
+    .register button{
+        border-radius: 30px;
+        padding:  0.3em 0.4em;
+    }
+    .sign button{
+        border-radius: 30px;
+        padding: 0.2em 0.2em;   
+        margin: 0 2rem;
+        
+    }
+    nav{
+        margin-left: 2rem;
+    }
+    nav ul li{
+        padding-left: 1rem;
+    }
+    
+
+    /*--------------------- HEADING ---------------*/
+    .upper-heading h1{
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+    .upper-heading p{
+
+        font-size: 1.7rem;
+    }
+    .top-left-page{
+        height: 18rem;
+    }
+
+
+
+    /* -------------------Flipbook------------------- */
+
+    section .container {
+    /* display: flex; */
+    height: 100vh;
+    width: 90vw;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    }
+
+    .container img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 10px;
+    }
+    .container h2{
+        font-size: 2rem;
+    }
+    .container .flipbook p::first-letter{
+        font-size: 25px;
+    }
+    .container .intro1 h2::after{
+        margin-bottom: 5px;
+        
+    }
+    .container .intro1 p{
+        font-size: 1.3rem;
+        width: 50%;
+    }
+    .container .intro2 h2::after{
+        margin-bottom: 5px;
+        
+    }
+    .container .intro2 p{
+        font-size: 1.3rem;
+    }
+    section h1{
+        margin-top: 3rem;
+        font-size: 6rem;
+    }
+
+    .container .flipbook .icons{
+        margin: 2px auto;
+        margin-top: 7px;
+    }
+    .container .intro1 .icons a{
+        padding-left:8px;
+    }
+    .container .intro2 .icons a{
+        padding-left:8px;
+    }
+
+}
+@media (max-height: 520px)
+{
+    /* -------------------Flipbook------------------- */
+
+    section .container {
+        /* display: flex; */
+        height: 100vh;
+        width: 80vw;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        }
+    
+        .container img {
+        max-width: 100px;
+        max-height: 100px;
+        margin-bottom: 10px;
+        }
+        .container h2{
+            font-size: 2rem;
+        }
+        .container .flipbook p::first-letter{
+            font-size: 25px;
+        }
+        .container .intro1 h2::after{
+            margin-bottom: 5px;
+            
+        }
+        .container .intro1 p{
+            font-size: 1.3rem;
+            width: 50%;
+        }
+        .container .intro2 h2::after{
+            margin-bottom: 5px;
+            
+        }
+        .container .intro2 p{
+            font-size: 1.3rem;
+        }
+        section h1{
+            margin-top: 3rem;
+            font-size: 6rem;
+        }
+    
+        .container .flipbook .icons{
+            margin: 2px auto;
+            margin-top: 7px;
+        }
+        .container .intro1 .icons a{
+            padding-left:8px;
+        }
+        .container .intro2 .icons a{
+            padding-left:8px;
+        }
+}
+@media (max-height: 595px) and (max-width: 800px){
+    
+    html{
+        font-size: 50%;
+    }
+    /* -------------------Flipbook------------------- */
+
+    section .container {
+    /* display: flex; */
+    height: 100vh;
+    width: 90vw;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    }
+
+    .container img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 10px;
+    }
+    .container .flipbook p::first-letter{
+        font-size: 25px;
+    }
+    .container .intro1 h2::after{
+        margin-bottom: 5px;
+        
+    }
+    .container .intro1 p{
+        font-size: 1.3rem;
+        width: 60%;
+    }
+    .container .intro2 h2::after{
+        margin-bottom: 5px;
+        
+    }
+    .container .intro2 p{
+        font-size: 1.3rem;
+        width: 60%;
+    }
+    section h1{
+        margin-top: 3rem;
+        font-size: 6rem;
+    }
+
+    .container .flipbook .icons{
+        margin: 2px auto;
+        margin-top: 7px;
+        width: 60%;
+    }
+    .container .intro1 .icons a{
+        padding-left:8px;
+    }
+    .container .intro2 .icons a{
+        padding-left:8px;
+    }
+}
+
+@media (orientation: portrait) and (max-height: 750px){
+    /* ------------Top-Page------------------------- */
+    html{
+        font-size: 50%;
+    }
+    /*--------------------- HEADING ---------------*/
+    .top-left-page{
+        height: 25rem;
+    }
+    
+    
+    .wrapper .logo img{
+        width: 8rem;
+        margin: 1rem;
+    }
+    .register button{
+        border-radius: 30px;
+        padding:  0.3em 0.4em;
+    }
+    .sign button{
+        border-radius: 30px;
+        padding: 0.2em 0.2em;   
+        margin: 0 2rem;
+        
+    }
+    nav ul li{
+        display: none
+    }
+
+
+
+    /*-------------Showcase--------------------*/
+    .showcase{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        
+    }
+    .showcase .box{
+        margin: 2rem 1rem;
+        width: 100%;
+    }
+    .showcase .box .upper{
+        padding: 10px;
+    }
+
+    /* -------------------Flipbook------------------- */
+section .container {
+/* display: flex; */
+height: 110vh;
+width: 85vw;
+margin: 0 auto;
+margin-bottom: 100px;
+}
+
+.container .flipbook {
+    height: 100%;
+    transition: margin-left 0.25s ease-out;
+    width: 100%;    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: 0 4px 10px #666;
+}
+.container .flipbook .page{
+    display: flex;
+    flex-direction: column;
+}
+.container img {
+display: block;
+max-width: 100px;
+max-height: 100px;
+border-radius: 100px;
+margin-bottom: 10px;
+}
+.container h2{
+    font-size: 2rem;
+}
+.container .flipbook p::first-letter{
+    font-size: 25px;
+}
+.container .intro1 h2::after{
+    content: "";
+    height: 2px;
+    margin-bottom: 1px;
+    
+}
+.container .intro1 p{
+    width: 100%;
+    font-size: 1.5rem;
+}
+.container .intro1 p::after{
+    height: 2px;
+    margin-top: 5px;
+
+}
+.container .intro2 h2::after{
+    content: "";
+    height: 2px;
+    margin-bottom: 1px;
+    
+}
+.container .intro2 p{
+    width: 100%;
+    font-size: 1.5rem;
+}
+.container .intro2 p::after{
+    height: 2px;
+    margin-top: 5px;
+
+}
+section h1{
+    margin-top: 3rem;
+    font-size: 6rem;
+}
+.container .flipbook .intro1{
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    border-right: 0;
+    border-bottom: 2px solid #181b3e;
+    
+}
+.container .flipbook .intro2{
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    background-color: white;
+}
+.container .flipbook .icons{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.container .intro1 .icons a{
+    font-size: 1rem;
+    padding-right:10px;
+    color: white;
+}
+.container .intro2 .icons a{
+    font-size: 1rem;
+    padding-right:10px;
+    color: #67d4ff;
+}
+.container .icons a:hover{
+    color: #181b3e;
+}
+.container .flipbook .intro2 .arrow-up img{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 88%;
+    bottom: 188%;
+}
+.container .flipbook .intro1 .arrow-up img{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 88%;
+    bottom: 88%;
+}
+
+
+
+
+
+
+    
+}
+@media (orientation: portrait) and (min-height: 701px) and (max-width: 550px){
+    /* ------------Top-Page------------------------- */
+    .wrapper .logo img{
+        width: 8rem;
+        margin: 1rem;
+    }
+    .register button{
+        border-radius: 30px;
+        padding:  0.3em 0.4em;
+    }
+    .sign button{
+        border-radius: 30px;
+        padding: 0.2em 0.2em;   
+        margin: 0 2rem;
+        
+    }
+    nav ul li{
+        display: none
+    }
+
+    .top-left-page{
+        height: 25rem;
+    }
+    
+
+    /*-------------Showcase--------------------*/
+    .showcase{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        
+    }
+    .showcase .box{
+        margin: 2rem 1rem;
+        width: 100%;
+    }
+    .showcase .box .upper{
+        padding: 10px;
+    }
+
+    /* -------------------Flipbook------------------- */
+    section .container {
+    /* display: flex; */
+    height: 110vh;
+    width: 85vw;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    }
+
+    .container .flipbook {
+        height: 100%;
+        transition: margin-left 0.25s ease-out;
+        width: 100%;    
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        box-shadow: 0 4px 10px #666;
+    }
+    .container .flipbook .page{
+        display: flex;
+        flex-direction: column;
+    }
+    .container img {
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    }
+    .container h2{
+        font-size: 2rem;
+    }
+    .container .flipbook p::first-letter{
+        font-size: 25px;
+    }
+    .container .intro1 h2::after{
+        content: "";
+        height: 2px;
+        margin-bottom: 1px;
+        
+    }
+    .container .intro1 p{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .container .intro1 p::after{
+        height: 2px;
+        margin-top: 5px;
+
+    }
+    .container .intro2 h2::after{
+        content: "";
+        height: 2px;
+        margin-bottom: 1px;
+        
+    }
+    .container .intro2 p{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .container .intro2 p::after{
+        height: 2px;
+        margin-top: 5px;
+
+    }
+    section h1{
+        margin-top: 3rem;
+        font-size: 6rem;
+    }
+    .container .flipbook .intro1{
+        width: 100%;
+        height: 50%;
+        padding: 10px;
+        border-right: 0;
+        border-bottom: 2px solid #181b3e;
+        
+    }
+    .container .flipbook .intro2{
+        width: 100%;
+        height: 50%;
+        padding: 10px;
+        background-color: white;
+    }
+    .container .flipbook .icons{
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .container .intro1 .icons a{
+        font-size: 1rem;
+        padding-right:10px;
+        color: white;
+    }
+    .container .intro2 .icons a{
+        font-size: 1rem;
+        padding-right:10px;
+        color: #67d4ff;
+    }
+    .container .icons a:hover{
+        color: #181b3e;
+    }
+    .container .flipbook .intro2 .arrow-up img{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 88%;
+        bottom: 188%;
+    }
+    .container .flipbook .intro1 .arrow-up img{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: 88%;
+        bottom: 88%;
+    }
+
+    
+}
+
+.logout button{
+    background-color: red;
+    
+    color: rgb(20, 9, 9);
+    border: solid rgb(114, 15, 15) ;
+    border-radius: 30px;
+    padding: 0.2em 0.6em;   
+    margin: 0 2rem;
+    transition: all 0.4s;
+    position: relative;
+    
+}
